@@ -13,4 +13,10 @@ router.get('/', async (req, res) => {
     res.json(bakers)
 })
 
+router.get('/:id', async (req, res) => {
+    const { id } = req.params
+    const baker = await Baker.findById(id).populate('breads')
+    res.render('bakerShow', { baker })
+})
+
 module.exports = router

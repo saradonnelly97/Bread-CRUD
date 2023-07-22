@@ -14,6 +14,7 @@ router.get('/new', async (req,res) => {
     res.render('new', { bakers })
 })
 
+
 //GET bread by id
 router.get('/:id', async (req, res) => {
     const { id } = req.params
