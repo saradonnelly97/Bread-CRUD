@@ -14,7 +14,8 @@ const breadSchema = new mongoose.Schema({
   },
   baker: {
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Baker'
+    ref: 'Baker',
+    required: true
   }
 })
 
